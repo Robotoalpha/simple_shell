@@ -1,9 +1,8 @@
 #include "shell.h"
 
 /**
- *
  * main - Simple Shell (Hsh)
- *@ALX-school
+ * @ALX-school
  * @argc: Argument Count
  * @argv:Argument Value
  * Return: Exit Value By Status
