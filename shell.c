@@ -1,7 +1,6 @@
 #include "shell.h"
 
 /**
- *
  * main - Simple Shell (Hsh)
  *@ALX-school
  * @argc: Argument Count
