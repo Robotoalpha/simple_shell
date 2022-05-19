@@ -47,4 +47,4 @@ char *not_expanded);
 void print_env(void);
 short remove_spaces(char *command);
 
-#endif 
+#endif
