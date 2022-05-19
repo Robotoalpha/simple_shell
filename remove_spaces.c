@@ -1,21 +1,23 @@
 #include "shell.h"
-#include <unistd.h>
-#include <stdlib.h>
 /**
- * print_number - prints an integer as if it were a string
- * @n: integer to print
- * Return: void
- */
-void print_number(int n)
+* remove_spaces - Removes lines of spaces.
+* @command: Command to review.
+* Return: 1 if skip necessary, 0 otherwise.
+*/
+short remove_spaces(char *command)
 {
-	unsigned int k;
-	char letter[1];
+	short i, sp = 0;
 
-	k = n;
-	if (k / 10)
+	for (i = 0; command[i]; i++)
+		if (command[i] == ' ' || command[i] == '\n')
+			sp++;
+		else
+			break;
+	if (!*(command + sp) || !_strcmp(command + sp, "\n"))
 	{
-		print_number(k / 10);
+		free(command);
+		return (1);
 	}
-	letter[0] = k % 10 + '0';
-	write(STDIN_FILENO, letter, 1);
+	_strcpy(command, command + sp);
+	return (0);
 }
