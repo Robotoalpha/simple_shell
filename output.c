@@ -9,7 +9,6 @@
 void _prerror(char **argv, int c, char **cmd)
 {
 	char *er = _itoa(c);
-
 	PRINTER(argv[0]);
 	PRINTER(" : ");
 	PRINTER(er);
